@@ -29,4 +29,13 @@ module.exports = class UsersClient{
             throw new Error(error)
         }
     }
+
+    static async findByEmail(email){
+        try {
+            const user = await usersModel.findOne({email})
+            return user
+        } catch (error) {
+            throw new Error(error.message)
+        }
+    }
 }

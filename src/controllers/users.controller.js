@@ -13,10 +13,12 @@ module.exports = class UsersController{
 
     static async register(req,res){
         try {
+            const user = await usersService.findByEmail(req.body.email)
+            if(user) throw new Error('Ya existe un usuario registrado con ese correo')
             await usersService.createUser(req.body)
-            return res.send()
+            return res.redirect('/')
         } catch (error) {
-            return res.status(500).json({message: error.message})
+            return res.render('auth/register', {error: error.message})
         }
     }
 }
