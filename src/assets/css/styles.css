@@ -1,0 +1,18 @@
+body {
+    background-color: #eaf6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-login{
+    width: 500px;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
