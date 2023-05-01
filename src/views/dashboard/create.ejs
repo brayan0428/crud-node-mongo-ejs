@@ -1,0 +1,42 @@
+<%- include('../layout/header'); -%>
+<div class="container mt-5">
+    <h1 class="mb-3">Crear Cliente</h1>
+    <form action="/dashboard/create" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Identificación</label>
+                    <input class="form-control"  type="text" name="identification" id="identification" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control"  type="text" name="name" id="name" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input class="form-control"  type="text" name="lastName" id="lastName" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control"  type="email" name="email" id="email" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input class="form-control"  type="text" name="phoneNumber" id="phoneNumber" required>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-info">Crear Cliente</button>
+        </div>
+    </form>
+</div>
+<%- include('../layout/footer'); -%>

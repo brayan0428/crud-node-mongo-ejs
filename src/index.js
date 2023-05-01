@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 
 // Configurar las rutas
 app.use('/', authRoutes);
-app.use(authenticationMiddleware)
+//app.use(authenticationMiddleware)
 app.use('/dashboard', dashboardRoutes)
 
 // Manejar errores

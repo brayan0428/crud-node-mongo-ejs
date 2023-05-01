@@ -1,2 +1,34 @@
 <%- include('../layout/header'); -%>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-3">
+        <h1>Clientes</h1>
+        <a href="/dashboard/create">Nuevo Cliente</a>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Identificación</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clients.forEach((client)=> { %>
+                <tr>
+                    <td><%= client.identification %></td>
+                    <td><%= client.name %></td>
+                    <td><%= client.lastName %></td>
+                    <td><%= client.email %></td>
+                    <td><%= client.phoneNumber %></td>
+                    <td>
+                        <a onclick="return confirm('¿Esta seguro que desea eliminar el cliente?')" href="/dashboard/delete/<%= client._id %>" class="text-danger">Eliminar</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
 <%- include('../layout/footer'); -%>

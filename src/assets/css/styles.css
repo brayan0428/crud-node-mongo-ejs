@@ -1,8 +1,8 @@
 body {
     background-color: #eaf6fc;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100vh;
 }
 
